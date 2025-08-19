@@ -1,3 +1,65 @@
+# AI Chatbot with LangGraph
+
+A Python-based chatbot that combines Google's Gemini model with Tavily search capabilities using LangGraph for orchestration.
+
+## Features
+
+- Interactive chat interface
+- Integration with Google's Gemini 2.0 Flash model
+- Real-time web search capabilities via Tavily
+- Streaming responses
+- Graceful error handling
+
+## Prerequisites
+
+- Python 3.x
+- Google API Key
+- Tavily API Key
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `GOOGLE_API_KEY` - Your Google API key for accessing Gemini
+- `TAVILY_API_KEY` - Your Tavily API key for search functionality
+
+The application will prompt for these if not set in your environment.
+
+## Usage
+
+Run the application:
+
+```bash
+python app.py
+```
+
+To interact with the chatbot:
+- Type your message and press Enter
+- Type 'quit', 'exit', or 'q' to end the session
+
+## Technical Details
+
+The application uses:
+- LangGraph for workflow orchestration
+- LangChain for LLM integration
+- Google's Gemini 2.0 Flash model for natural language processing
+- Tavily Search for real-time web search capabilities
+
+## Error Handling
+
+The application includes fallback behavior if standard input is not available and will gracefully handle exceptions during execution.
+
+Below is the copy of the page on LangGraph about tools
+
+
 # Add tools
 
 To handle queries that your chatbot can't answer "from memory", integrate a web search tool. The chatbot can use this tool to find relevant information and provide better responses.
